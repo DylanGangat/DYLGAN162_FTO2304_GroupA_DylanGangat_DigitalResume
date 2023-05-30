@@ -1,9 +1,8 @@
-:root {
-  --text-body: #333;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Press+Start+2P&display=swap");
 
-  --ff-primary: system-ui;
-  --ff-base: var(--ff-primary);
-  --ff-accent: var(--ff-primary);
+:root {
+  --ff-primary: "Oswald", sans-serif;
+  --ff-secondary: "Press Start 2P", cursive;
 
   --fw-regular: 400;
   --fw-semi-bold: 500;
@@ -17,25 +16,13 @@
   --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
   --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
 
-  /* --clr-primary-300: hsl(219, 76%, 55%);
-  --clr-primary-400: hsl(219, 76%, 40%);
-  --clr-primary-500: hsl(219, 76%, 25%);
-  --clr-secondary-300: hsl(269, 75%, 55%);
-  --clr-secondary-400: hsl(269, 75%, 40%);
-  --clr-secondary-500: hsl(269, 75%, 25%);
-  --clr-accent-300: hsl(358, 72%, 65%);
-  --clr-accent-400: hsl(358, 72%, 50%);
-  --clr-accent-500: hsl(358, 72%, 35%); */
-}
-
-body {
-  /* background-color: #FF69B4; */
-  /* background-color: #39FF14; */
-  /* background-color: #00F5FF; */
-  /* background-color: #333; */
-  /* background-color: #FFFF00; */
-  /* background-color: #800080; */
-  background-color: #40e0d0;
+  --bg-body: hsl(44, 22%, 90%); /* perfered one*/
+  /* --bg-body: hsl(23, 69%, 90%); */
+  --clr-primary-400: hsl(0, 0%, 20%);
+  --clr-primary-500: hsl(220, 4%, 13%);
+  --clr-secondary-400: hsl(162, 34%, 58%);
+  --clr-secondary-500: hsl(163, 24%, 42%);
+  --clr-accent-400: hsl(36, 89%, 55%);
 }
 
 /* Box sizing rules */
@@ -70,17 +57,17 @@ body {
 
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
-  font-family: var(--ff-base);
+  font-family: var(--ff-primary);
   font-weight: var(--fw-400);
   font-size: var(--fs-400);
   color: var(--text-body);
+  background-color: var(--clr-body);
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+h1 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-900);
 }
 
 /* Make images easier to work with */
