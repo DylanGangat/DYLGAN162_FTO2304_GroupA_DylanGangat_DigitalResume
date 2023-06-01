@@ -122,7 +122,7 @@ svg {
   margin-inline: auto;
 }
 
-strong {
+b {
   font-weight: var(--fw-bold);
 }
 
