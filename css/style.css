@@ -1,25 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600&family=Press+Start+2P&display=swap");
 
 :root {
-  --ff-primary: "Oswald", sans-serif;
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-primary-2: "Lato", sans-serif;
   --ff-secondary: "Press Start 2P", cursive;
 
   --fw-regular: 400;
   --fw-semi-bold: 500;
-  --fw-bold: 700;
+  --fw-bold: 600;
+  --fw-extra-bold: 900;
 
-  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
-  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
-  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
-  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
-  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.3125rem;
+  --fs-600: clamp(1.4rem, 0.5rem + 3vw, 1.6875rem);
+  --fs-800: clamp(2.5rem, 0.5rem + 7vw, 3.75rem);
+
+  --fs-900: clamp(2.5rem, 0.5rem + 10vw, 5rem);
 
   --bg-body: hsl(44, 22%, 90%); /* perfered one*/
   /* --bg-body: hsl(23, 69%, 90%); */
+
+  --bg-primary: hsl(143, 10%, 50%);
+  /* --bg-primary: hsl(75, 6%, 74%); */
+
   --clr-primary-400: hsl(0, 0%, 20%);
-  --clr-primary-500: hsl(220, 4%, 13%);
+  --clr-primary-500: hsl(210, 63%, 19%);
+
   --clr-secondary-400: hsl(162, 34%, 58%);
   --clr-secondary-500: hsl(163, 24%, 42%);
   --clr-accent-400: hsl(36, 89%, 55%);
@@ -115,6 +122,10 @@ svg {
   margin-inline: auto;
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
@@ -166,28 +177,23 @@ svg {
 /* ==== Box Shadows ==== */
 
 .box-shadow-1 {
-  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.012), 0px 22px 18px rgb(0, 0, 0, 0.018),
-    0px 100px 80px rgb(0, 0, 0, 0.03);
+  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.012), 0px 22px 18px rgb(0, 0, 0, 0.018), 0px 100px 80px rgb(0, 0, 0, 0.03);
 }
 
 .box-shadow-2 {
-  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.016), 0px 22px 18px rgb(0, 0, 0, 0.024),
-    0px 100px 80px rgb(0, 0, 0, 0.04);
+  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.016), 0px 22px 18px rgb(0, 0, 0, 0.024), 0px 100px 80px rgb(0, 0, 0, 0.04);
 }
 
 .box-shadow-3 {
-  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.02), 0px 22px 18px rgb(0, 0, 0, 0.03),
-    0px 100px 80px rgb(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.02), 0px 22px 18px rgb(0, 0, 0, 0.03), 0px 100px 80px rgb(0, 0, 0, 0.05);
 }
 
 .box-shadow-4 {
-  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042),
-    0px 100px 80px rgb(0, 0, 0, 0.07);
+  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042), 0px 100px 80px rgb(0, 0, 0, 0.07);
 }
 
 .box-shadow-5 {
-  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
-    0px 100px 80px rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06), 0px 100px 80px rgb(0, 0, 0, 0.1);
 }
 
 /* ====  ==== */

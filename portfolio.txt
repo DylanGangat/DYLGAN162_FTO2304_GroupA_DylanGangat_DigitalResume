@@ -88,3 +88,9 @@ Certainly! Here are some Google Fonts that can be suitable for both headings and
    - Link: https://fonts.google.com/specimen/Poppins
 
 These fonts offer a balance between a 90's aesthetic and legibility, allowing you to maintain a cohesive and visually appealing portfolio.
+
+=========================================================================
+
+
+
+sub-heading: "As a frontend developer, I specialize in creating captivating and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I bring ideas to life by crafting visually stunning designs and seamless user experiences. I'm passionate about blending aesthetics with functionality to deliver high-quality web solutions that leave a lasting impression."
