@@ -181,15 +181,16 @@ b {
 
 .btn {
   display: inline-flex;
-  width: min(100%, 14.375rem);
   gap: 1rem;
   align-items: center;
   justify-content: center;
   font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  width: min(100%, 14.375rem);
   text-transform: uppercase;
   color: inherit;
   background-color: white;
-  padding: 1.5rem 1.25rem;
+  padding: 1.5em 1.25em;
   border: 5px solid var(--clr-primary-400);
   text-decoration: none;
   transition: all 350ms ease-in;
@@ -198,6 +199,12 @@ b {
 .btn:is(:hover, :focus) {
   color: white;
   background-color: var(--clr-primary-400);
+}
+
+/* To change the color of svg */
+
+.btn:is(:hover, :focus-visible) .github-icon {
+  fill: white;
 }
 
 .btn .icon {
@@ -290,18 +297,16 @@ b {
   gap: 1rem;
 }
 
-/* To change the color of svg */
-
-.btn:is(:hover, :focus-visible) .github-icon {
-  fill: white;
-}
-
 /* Tech stack group */
 
 .tech-stack-group {
   border-top: 5px dotted var(--clr-primary-400);
   padding-top: 1rem;
   font-family: var(--ff-secondary);
+}
+
+.tech-stack-group .tech-stack-title {
+  font-size: var(--fs-300);
 }
 
 .tech-stack-group .tech-stack-list {
@@ -312,11 +317,34 @@ b {
   font-size: var(--fs-200);
 }
 
+.tech-stack-group .tech-stack-item .icon {
+  height: 25px;
+  width: 25px;
+}
+
 .tech-stack-group .tech-stack-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
-/* ==== Section ==== */
+/* ==== About Section ==== */
+
+.about .about-content {
+  align-self: center;
+}
+
+.education-list {
+  display: grid;
+  gap: 1rem;
+  font-size: var(--fs-300);
+}
+
+/* ==== Education Section ==== */
+
+ .education-list .education-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem;
+} 
 
 /* ==== Section ==== */
