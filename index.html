@@ -11,20 +11,27 @@
   <body>
     <!-- Header  -->
 
-    <header>
+    <header class="site-header">
       <div class="container">
-        <a href="#">
-          <img src="/images/icons/music-headphones-human.svg" alt="Pixel boy with headphones icon" />
-          <span>DYLAN.</span>
-        </a>
+        <nav class="main-nav">
+          <a href="#" class="logo">
+            <svg class="icon">
+              <use xlink:href="images/icons/sprite.svg#man-icon"></use>
+            </svg>
+            <span>DYLAN.</span>
+          </a>
 
-        <nav class="primary-navigation">
-          <ul class="navigation-list">
+          <ul class="nav-list">
             <li><a href="#about">About Me</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <div>
+            <svg class="icon">
+              <use xlink:href="images/icons/sprite.svg#menu-icon"></use>
+            </svg>
+          </div>
         </nav>
       </div>
     </header>
@@ -32,30 +39,40 @@
       <!-- Hero Section -->
 
       <section class="hero">
-        <div class="container">
-          <div class="hero-content">
+        <div class="container even-columns">
+          <div class="hero-content flow">
             <h1 class="site-title">Hi I'm Dylan, a Frontend Developer based in Cape Town</h1>
             <p>
-              As a frontend developer, I specialize in creating captivating and user-friendly websites. I bring ideas to life by crafting visually stunning
-              designs and seamless user experiences. I'm passionate about blending aesthetics with functionality to deliver high-quality web solutions that
-              leave a lasting impression.
+              As a frontend developer, I specialize in
+              <b>creating captivating and user-friendly websites.</b>
+              I bring ideas to life by
+              <b>crafting visually stunning designs</b>
+              and
+              <b>seamless user experiences</b>
+              that leave a lasting impression.
             </p>
             <div class="cta-group">
               <a class="btn" href="#projects">Contact me</a>
-              <a href="https://github.com/DylanGangat" target="_blank">
-                <img src="/images/icons/github.svg" alt="Github icon" />
+              <a class="btn" href="https://github.com/DylanGangat" target="_blank">
+                <svg class="icon github-icon">
+                  <use xlink:href="/images/icons/sprite.svg#github-icon"></use>
+                </svg>
                 <span>Github</span>
               </a>
             </div>
-            <div class="tech-stack">
-              <p>Tech stack:</p>
-              <ul>
-                <li>
-                  <img src="/images/icons/search-coding.svg" alt="Magnifine glass icon" />
+            <div class="tech-stack-group flow">
+              <p class="tech-stack-title">Tech stack:</p>
+              <ul class="tech-stack-list">
+                <li class="tech-stack-item">
+                  <svg class="icon">
+                    <use xlink:href="/images/icons/sprite.svg#search-coding-icon"></use>
+                  </svg>
                   <span>HTML</span>
                 </li>
-                <li>
-                  <img src="/images/icons/search-coding.svg" alt="Magnifine glass icon" />
+                <li class="tech-stack-item">
+                  <svg class="icon">
+                    <use xlink:href="/images/icons/sprite.svg#search-coding-icon"></use>
+                  </svg>
                   <span>CSS</span>
                 </li>
               </ul>
@@ -227,7 +244,9 @@
               <span>LinkedIn</span>
             </a>
             <a href="#" target="_blank">
-              <img src="images/icons/github.svg" alt="Github icon" height="40" width="40" />
+              <svg class="icon">
+                <use xlink:href="/images/icons/sprite.svg#github-icon"></use>
+              </svg>
               <span>Github</span>
             </a>
           </address>
