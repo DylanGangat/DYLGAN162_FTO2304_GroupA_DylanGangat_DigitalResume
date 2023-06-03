@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap");
 
 :root {
   --ff-primary: "Montserrat", sans-serif;
-  /* --ff-primary-2: "Lato", sans-serif; */
   --ff-secondary: "Press Start 2P", cursive;
 
-  --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 600;
-  --fw-extra-bold: 900;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
 
   --fs-200: 0.8rem;
   --fs-300: 1rem;
@@ -18,20 +18,12 @@
   --fs-900: 2rem; /* h1 */
 
   --bg-body: #ebe8e0;
-  /* --bg-body: hsl(23, 69%, 90%); */
-
-  --bg-primary: #738c7d;
-  /* --bg-primary: hsl(75, 6%, 74%); */
-
   --clr-primary-400: #333333;
-
-  --clr-primary-500: #12304f;
-
+  --clr-primary-400: #1e1926;
   --clr-secondary-400: #0e14c5;
+  --clr-accent-red: #ca0001;
+  --clr-accent-purple: #4d2aa5;
 
-  /* --clr-secondary-400: #6fb8a2; */
-  /* --clr-secondary-500: #518576; */
-  /* --clr-accent-400: #f2a126; */
 
   --animate: all 350ms ease-in-out;
   --border-solid: 5px solid currentColor;
@@ -47,6 +39,7 @@
     --fs-900: 3rem; /* h1 */
   }
 }
+
 /* Box sizing rules */
 *,
 *::before,
@@ -117,6 +110,8 @@ img {
   transition: var(--animate);
 }
 
+/* Image Animation */
+
 img:is(:hover, :focus) {
   color: var(--clr-secondary-400);
   border: var(--border-dotted);
@@ -165,13 +160,15 @@ footer {
   gap: 0.5rem;
   text-decoration: none;
   color: inherit;
-  font-weight: var(--fw-extra-bold);
+  font-weight: var(--fw-900);
   transition: var(--animate);
 }
 
 .logo span {
   align-self: flex-end;
 }
+
+/* Logo Animation */
 
 .logo:is(:hover, :focus) span,
 .logo:is(:hover, :focus) svg {
@@ -200,7 +197,7 @@ footer {
 }
 
 b {
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-700);
 }
 
 .even-columns {
@@ -215,6 +212,7 @@ b {
   }
 }
 
+/* responsive auto grid where it has a min and max value. The grid item can grow till there is a minimum of 250px width extra available and then it's sibling will automatic be placed next to it in a column. The min function basically decides out of the two values which is the smallest so the minimum value for each grid item will be 250px but when on phones and is smaller than 250px it will become 100% which will prevent card from overflowing it's parent container. */
 .grid-auto-fit {
   display: grid;
   grid-gap: 1rem;
@@ -243,7 +241,7 @@ b {
   width: 1px;
 }
 
-/* === button === */
+/* === CTA Button === */
 
 .btn {
   display: inline-flex;
@@ -261,6 +259,8 @@ b {
   text-decoration: none;
   transition: var(--animate);
 }
+
+/* CTA Animation */
 
 .btn:is(:hover, :focus) {
   color: white;
@@ -293,12 +293,12 @@ b {
 
 .site-title {
   font-size: var(--fs-900);
-  color: #0e14c5;
+  color: var(--clr-secondary-400);
 }
 
 .section-title {
   font-size: var(--fs-600);
-  color: #cc2d18;
+  color: var(--clr-accent-red);
 }
 
 /* ==== Header Section ==== */
@@ -339,9 +339,13 @@ b {
   }
 }
 
+/* Main nav Animation */
 .main-nav .nav-list a:is(:hover, :focus) {
   color: var(--clr-secondary-400);
 }
+
+
+/* For when I create a checkbox hamburger menu */
 
 /* @media (max-width: 50em) {
   .main-nav .nav-list {
@@ -443,6 +447,8 @@ b {
   transition: var(--animate);
 }
 
+/* Card Animation */
+
 .card:is(:hover, :focus) {
   color: white;
   background-color: var(--clr-secondary-400);
@@ -481,6 +487,8 @@ b {
   transition: var(--animate);
 }
 
+/* Tags animation */
+
 .card:is(:hover, :focus) .tag-group .tag {
   color: white;
 }
@@ -496,7 +504,7 @@ b {
 }
 
 .card .tag-group .tag-figma {
-  color: #cc2d18;
+  color: var(--clr-accent-red);
   border: var(--border-solid);
 }
 
@@ -508,6 +516,8 @@ b {
 .card .link-group .icon {
   transition: var(--animate);
 }
+
+/* Icon Animation */
 
 .card .link-group .icon:is(:hover, :focus) {
   transform: translateY(-2px);
@@ -529,6 +539,8 @@ b {
   transition: var(--animate);
 }
 
+/* Contact form address animation */
+
 .contact-form address a:is(:hover, :focus) {
   color: var(--clr-secondary-400);
   border-bottom: var(--border-dotted);
@@ -536,7 +548,7 @@ b {
 
 .contact-form form {
   display: grid;
-  margin-inline: auto;
+
   gap: 1rem;
   max-width: 25rem;
 }
@@ -551,22 +563,14 @@ b {
   justify-self: start;
 }
 
-.contact-form .form-group input,
-.contact-form .form-group textarea {
+.contact-form .form-group :is(input, textarea) {
   color: inherit;
   border: var(--border-solid);
   padding: 0.5rem;
 }
 
-/* styles the placeholder text*/
-
-input::placeholder {
-  color: var(--clr-primary-400);
-  opacity: 0.6;
-}
-
-/* styles the cursor line*/
-input:placeholder-shown {
+/* styles the placeholder text */
+:is(input, textarea)::placeholder {
   color: var(--clr-primary-400);
 }
 
@@ -580,6 +584,8 @@ input:placeholder-shown {
   cursor: pointer;
   transition: var(--animate);
 }
+
+/* Submit button animation */
 
 .contact-form button:is(:hover, :focus) {
   color: white;
@@ -618,6 +624,8 @@ input:placeholder-shown {
 .site-footer address .icon {
   transition: var(--animate);
 }
+
+/* Icon Animation */
 
 .site-footer address .icon:is(:hover, :focus) {
   transform: translateY(-2px);
