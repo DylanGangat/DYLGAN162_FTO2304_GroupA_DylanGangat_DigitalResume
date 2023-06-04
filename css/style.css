@@ -24,9 +24,17 @@
   --clr-accent-red: #ca0001;
   --clr-accent-purple: #4d2aa5;
 
-  --animate: all 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
   --border-solid: 5px solid currentColor;
   --border-dotted: 5px dotted currentColor;
+
+  --animate: all 350ms var(--ease-in-out);
+
+  /* Timing functions */
+
+  --ease-in: cubic-bezier(0.75, 0, 1, 1);
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease: cubic-bezier(0.44, 0.21, 0, 1);
 }
 
 /* Font changes to h1, h2, h3*/
@@ -183,7 +191,8 @@ footer {
   color: var(--clr-secondary-400);
 }
 
-/* spacing all items except the first child in a container :where has 0 specificity*/
+/* spacing all items except the first child in a container :where has 0 specificity */
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1rem);
 }
@@ -221,6 +230,7 @@ b {
 }
 
 /* responsive auto grid where it has a min and max value. The grid item can grow till there is a minimum of 250px width extra available and then it's sibling will automatic be placed next to it in a column. The min function basically decides out of the two values which is the smallest so the minimum value for each grid item will be 250px but when on phones and is smaller than 250px it will become 100% which will prevent card from overflowing it's parent container. */
+
 .grid-auto-fit {
   display: grid;
   grid-gap: 1rem;
@@ -366,6 +376,63 @@ b {
 } */
 
 /* ==== Hero Section ==== */
+
+/* Slides in from left*/
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slides in from bottom*/
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slides in from right*/
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content .site-title {
+  animation: slideFromLeft 3s var(--ease-in-out);
+}
+
+.hero-content .site-subtitle {
+  animation: slideFromLeft 3.2s var(--ease-in-out);
+}
+
+.hero-content :is(.cta-group, .tech-stack-group) {
+  animation: slideFromBottom 3.2s var(--ease-in-out);
+}
+
+.hero-image {
+  animation: slideFromRight 3s var(--ease-in-out);
+}
+
 .hero .hero-content {
   --flow-spacer: 1.5rem;
   text-align: center;
