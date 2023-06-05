@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap");
 
+/* Custom properties */
+
 :root {
   /* Font family */
   --ff-primary: "Montserrat", sans-serif;
@@ -37,7 +39,7 @@
   --ease: cubic-bezier(0.44, 0.21, 0, 1);
 }
 
-/* Font changes to h1, h2, h3*/
+/* Font changes to h1, h2, h3 */
 
 @media (min-width: 50em) {
   :root {
@@ -155,6 +157,28 @@ footer {
   }
 }
 
+/* Responsive grids */
+
+.even-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+/* responsive auto grid where it has a min and max value. The grid item can grow till there is a minimum of 250px width extra available and then it's sibling will automatic be placed next to it in a column. The min function basically decides out of the two values which is the smallest so the minimum value for each grid item will be 250px but when on phones and is smaller than 250px it will become 100% which will prevent card from overflowing it's parent container. */
+
+.grid-auto-fit {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
 /* svg icons  */
 
 .icon {
@@ -210,28 +234,6 @@ b {
   font-weight: var(--fw-700);
 }
 
-/* Responsive grids */
-
-.even-columns {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (min-width: 50em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
-
-/* responsive auto grid where it has a min and max value. The grid item can grow till there is a minimum of 250px width extra available and then it's sibling will automatic be placed next to it in a column. The min function basically decides out of the two values which is the smallest so the minimum value for each grid item will be 250px but when on phones and is smaller than 250px it will become 100% which will prevent card from overflowing it's parent container. */
-
-.grid-auto-fit {
-  display: grid;
-  grid-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-}
-
 .color-secondary {
   color: var(--clr-secondary-400);
 }
@@ -243,6 +245,8 @@ b {
 .uppercase {
   text-transform: uppercase;
 }
+
+/* Best practice when hideing an element but screenreaders will still be able to have access to it */
 
 .visually-hidden {
   clip: rect(0 0 0 0);
