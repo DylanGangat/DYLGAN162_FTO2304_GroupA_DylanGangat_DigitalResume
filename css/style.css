@@ -133,11 +133,6 @@ img:is(:hover, :focus) {
   border: var(--border-dotted);
 }
 
-.card img:is(:hover, :focus) {
-  color: var(--clr-neutral);
-  border: var(--border-dotted);
-}
-
 /* ==== Utilities ==== */
 
 .container {
@@ -530,9 +525,9 @@ b {
 /* Card Animation */
 
 .card:is(:hover, :focus) {
-  color: var(--clr-neutral);
-  background-color: var(--clr-secondary-400);
-  border: var(--border-dotted);
+  /* color: var(--clr-secondary-400); */
+  transform: translateY(-16px);
+  border: var(--border-solid);
 }
 
 .card .card-title {
@@ -568,10 +563,6 @@ b {
 }
 
 /* Tags animation */
-
-.card:is(:hover, :focus) .tag-group .tag {
-  color: var(--clr-neutral);
-}
 
 .card .tag-group .tag-html {
   color: var(--clr-secondary-400);
