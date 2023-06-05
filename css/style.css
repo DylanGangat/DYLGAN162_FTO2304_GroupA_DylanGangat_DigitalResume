@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap");
 
 :root {
+  /* Font family */
   --ff-primary: "Montserrat", sans-serif;
   --ff-secondary: "Press Start 2P", cursive;
 
+  /* Font weight*/
   --fw-400: 400;
-  --fw-500: 500;
-  --fw-600: 600;
   --fw-700: 700;
-  --fw-900: 900;
 
+  /* Font size */
   --fs-200: 0.8rem;
   --fs-300: 1rem;
   --fs-400: 1.125rem; /* body */
@@ -165,13 +165,11 @@ footer {
 .logo {
   font-family: var(--ff-secondary);
   font-size: var(--fs-200);
-  letter-spacing: 0.05rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   color: inherit;
-  font-weight: var(--fw-900);
   transition: var(--animate);
 }
 
@@ -211,6 +209,8 @@ footer {
 b {
   font-weight: var(--fw-700);
 }
+
+/* Responsive grids */
 
 .even-columns {
   display: grid;
@@ -331,6 +331,8 @@ b {
   gap: 1rem;
   align-items: center;
   font-family: var(--ff-secondary);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.05rem;
 }
 
 .main-nav .nav-list {
