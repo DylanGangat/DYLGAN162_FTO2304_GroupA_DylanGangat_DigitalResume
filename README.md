@@ -13,8 +13,9 @@ Welcome to my portfolio website! This website showcases my skills, projects, and
 - [Technologies Used](#technologies-used)
 - [Link to Wireframe](#link-to-wireframe)
 - [Responsive Design Screenshots](#responsive-design-screenshots)
+- [Resources](#resources)
 
-## Description 👇
+## <a id="description">Description</a> 👇
 
 This portfolio website is designed to introduce myself, Dylan, as a software developer. It provides information about my skills, education, work experience, and showcases some of my notable projects. The website is designed to be user-friendly, responsive, and visually appealing.
 
@@ -26,16 +27,17 @@ This portfolio website is designed to introduce myself, Dylan, as a software dev
 - **Education:** Find out about my educational background and any relevant certifications or degrees.
 - **Contact Me:** Reach out to me through the provided contact form or connect with me on various social media platforms.
 
-## Technologies Used 👨‍💻
+## <a id="technologies-used">Technologies Used</a> 👨‍💻
 
 - HTML
 - CSS
+- Figma
 
-## Link to Wireframe: 🎨
+## <a id="link-to-wireframe">Link to Wireframe</a> 🎨
 
 [Figma Wireframe](https://www.figma.com/file/YZZ3zVwQXarX1nIK8EAGhw/DYLGAN162_FTO2304_GroupA_DylanGangat_DigitalResume?type=design&node-id=0%3A1&t=GY9VilmpfDv6t7ST-1)
 
-## Responsive Design Screenshots 📸
+## <a id="responsive-design-screenshots">Responsive Design Screenshots</a> 📸
 
 A quick overview of how my website looks on different devices.
 
@@ -51,7 +53,7 @@ A quick overview of how my website looks on different devices.
 
 ![Desktop Design](/images/designs/desktop-design.webp)
 
-## Resources: 🥇
+## <a id="resources">Resources</a> 🥇
 
 Here are some cool websites that I used while coding this website.
 
