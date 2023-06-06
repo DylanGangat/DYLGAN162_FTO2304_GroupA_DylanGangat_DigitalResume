@@ -316,6 +316,8 @@ b {
   max-height: var(--header-max-height);
 }
 
+/* Nav template for when not using a hamburger-menu */
+
 /* .main-nav {
   display: flex;
   flex-direction: column;
@@ -348,14 +350,6 @@ b {
     gap: 1rem;
   }
 } */
-
-/* Main nav Animation */
-
-.main-nav .nav-list a:is(:hover, :focus) {
-  color: var(--clr-secondary-400);
-}
-
-/* Toggle hamburger menu */
 
 /* Devices > 50em */
 
@@ -400,7 +394,13 @@ b {
   transition: var(--animate);
 }
 
-/* Display hamburger menu on devices < 50em only and these style will only apply under width <50em*/
+/* Main nav Animation */
+
+.main-nav .nav-list a:is(:hover, :focus) {
+  color: var(--clr-secondary-400);
+}
+
+/* Display hamburger menu on devices < 50em and these style will only apply under width < 50em*/
 
 @media (max-width: 50em) {
   .menu-toggle {
@@ -431,7 +431,7 @@ b {
     transform: translateX(100%);
     transition: var(--animate);
   }
-  
+
   /* I made it width: 100%; so it will allow the entire row to be a link instead of just the text */
 
   .main-nav .nav-list li {
