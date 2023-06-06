@@ -28,8 +28,9 @@
 
   --border-solid: 5px solid currentColor;
   --border-dotted: 5px dotted currentColor;
-
   --animate: all 350ms var(--ease-in-out);
+
+  --header-max-height: 4.5rem;
 
   /* Timing functions */
 
@@ -186,21 +187,6 @@ footer {
   width: 35px;
 }
 
-.logo {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-200);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: inherit;
-  transition: var(--animate);
-}
-
-.logo span {
-  align-self: flex-end;
-}
-
 /* Logo Animation */
 
 .logo:is(:hover, :focus) span,
@@ -327,9 +313,10 @@ b {
   background-color: var(--bg-body);
   padding: 1rem 0;
   border-bottom: var(--border-solid);
+  max-height: var(--header-max-height);
 }
 
-.main-nav {
+/* .main-nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -360,7 +347,7 @@ b {
   .main-nav .nav-list {
     gap: 1rem;
   }
-}
+} */
 
 /* Main nav Animation */
 
@@ -368,13 +355,96 @@ b {
   color: var(--clr-secondary-400);
 }
 
-/* For when I create a checkbox hamburger menu */
+/* Toggle hamburger menu */
 
-/* @media (max-width: 50em) {
-  .main-nav .nav-list {
-    display: none;
+/* Devices > 50em */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-200);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--animate);
+}
+
+/* Hide hamburger menu on desktop */
+
+.menu-toggle {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.05rem;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: var(--fs-200);
+  text-transform: uppercase;
+  transition: var(--animate);
+}
+
+/* Display hamburger menu on devices < 50em only and these style will only apply under width <50em*/
+
+@media (max-width: 50em) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
   }
-} */
+  /* Hide nav on mobiles */
+  .nav-list.show {
+    display: hidden;
+  }
+
+  /* If checkbox is checked then display nav */
+
+  .hamburger-menu:checked + .nav-list.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .main-nav .nav-list {
+    background-color: var(--bg-body);
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: var(--header-max-height); /* This is the height of the header  */
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: var(--animate);
+  }
+  
+  /* I made it width: 100%; so it will allow the entire row to be a link instead of just the text */
+
+  .main-nav .nav-list li {
+    width: 100%;
+    border-bottom: var(--border-solid);
+  }
+
+  .main-nav .nav-list a {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
 
 /* ==== Hero Section ==== */
 

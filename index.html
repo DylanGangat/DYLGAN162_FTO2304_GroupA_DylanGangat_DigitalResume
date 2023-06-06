@@ -24,6 +24,8 @@
   <header class="site-header">
     <div class="container">
       <nav class="main-nav">
+        <!-- Logo -->
+
         <a href="#" class="logo">
           <svg class="icon">
             <use xlink:href="images/icons/sprite.svg#man-icon"></use>
@@ -31,17 +33,24 @@
           <span>DYLAN.</span>
         </a>
 
-        <ul class="nav-list">
+        <!-- Hamburger menu -->
+
+        <label for="menu-toggle" class="menu-toggle">
+          <svg class="icon">
+            <use xlink:href="images/icons/sprite.svg#menu-icon"></use>
+          </svg>
+        </label>
+        <input class="visually-hidden hamburger-menu" type="checkbox" name="hamburger-menu" id="menu-toggle">
+
+        <!-- Nav list  -->
+
+        <ul class="nav-list show">
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <!-- <div>
-            <svg class="icon hamburger-menu">
-              <use xlink:href="images/icons/sprite.svg#menu-icon"></use>
-            </svg>
-          </div> -->
+
       </nav>
     </div>
   </header>
@@ -50,7 +59,7 @@
 
     <section class="hero">
       <div class="container even-columns">
-        
+
         <div class="hero-content flow">
           <h1 class="site-title">
             Hi I'm Dylan,a Frontend Developer based in Cape Town
