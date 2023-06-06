@@ -113,6 +113,7 @@ body {
   color: var(--clr-primary-400);
   background-color: var(--bg-body);
   line-height: 1.5;
+  overflow-x: hidden; /* I used this because I have my nav translated off the right of the page and I need to hide it  */
 }
 
 /* Make images easier to work with */
@@ -146,7 +147,7 @@ img:is(:hover, :focus) {
 
 section,
 footer {
-  padding-block: 2rem;
+  padding-block: 2rem; /* shothand for padding vertically */
 }
 
 @media (min-width: 50em) {
@@ -176,7 +177,7 @@ footer {
 
 .grid-auto-fit {
   display: grid;
-  grid-gap: 1.5rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 
@@ -351,7 +352,9 @@ b {
   }
 } */
 
-/* Devices > 50em */
+
+
+/* === Basical styles for my nav accross the entire site === */
 
 .main-nav {
   display: flex;
@@ -400,22 +403,28 @@ b {
   color: var(--clr-secondary-400);
 }
 
-/* Display hamburger menu on devices < 50em and these style will only apply under width < 50em*/
+/* === Display hamburger menu on devices < 50em and these style will only apply under width < 50em === */
 
 @media (max-width: 50em) {
   .menu-toggle {
     display: block;
     cursor: pointer;
+    transition: var(--animate);
   }
+
+  .menu-toggle:is(:hover, :focus) svg {
+    color: var(--clr-secondary-400);
+  }
+
   /* Hide nav on mobiles */
-  .nav-list.show {
-    display: hidden;
+  .main-nav .nav-list.show {
+    visibility: hidden; /* hiding nav list until hamburger is toggle */
   }
 
   /* If checkbox is checked then display nav */
 
   .hamburger-menu:checked + .nav-list.show {
-    display: flex;
+    visibility: visible;
     transform: translateX(0);
   }
 
@@ -427,7 +436,6 @@ b {
     top: var(--header-max-height); /* This is the height of the header  */
     left: 0;
     width: 100%;
-    z-index: -1;
     transform: translateX(100%);
     transition: var(--animate);
   }
