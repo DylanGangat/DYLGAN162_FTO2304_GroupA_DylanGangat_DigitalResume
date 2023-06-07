@@ -119,8 +119,8 @@ body {
   background-color: var(--bg-body);
   line-height: 1.5;
   /* I used this because I have my nav translated off the right of the page and I need to hide it  */
-  position: relative;
-  overflow-x: hidden;
+  /* position: relative;
+  overflow-x: hidden; */
 }
 
 /* Make images easier to work with */
@@ -313,47 +313,25 @@ b {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1;
   background-color: var(--bg-body);
   padding: 1rem 0;
   border-bottom: var(--border-solid);
   max-height: var(--header-max-height);
 }
 
-/* Nav template for when not using a hamburger-menu */
+/* This is to add a background under the text of the header so that when my menu translates down from the top it seems like it moving from under the nav */
+/* Do to the header being the containing block, the child menu can't be under it */
 
-/* .main-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  font-family: var(--ff-secondary);
-  font-weight: var(--fw-700);
-  letter-spacing: 0.05rem;
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-body);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
-
-.main-nav .nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: var(--fs-200);
-  text-transform: uppercase;
-  transition: var(--animate);
-}
-
-@media (min-width: 50em) {
-  .main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .main-nav .nav-list {
-    gap: 1rem;
-  }
-} */
 
 /* === Basical styles for my nav accross the entire site === */
 
@@ -418,15 +396,16 @@ b {
   }
 
   /* Hide nav on mobiles */
+
   .main-nav .nav-list.show {
-    visibility: hidden; /* hiding nav list until hamburger is toggle */
+    visibility: hidden; /*hiding nav list until hamburger is toggle */
   }
 
   /* If checkbox is checked then display nav */
 
   .hamburger-menu:checked + .nav-list.show {
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   .main-nav .nav-list {
@@ -437,8 +416,9 @@ b {
     top: var(--header-max-height); /* This is the height of the header  */
     left: 0;
     width: 100%;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: var(--animate);
+    z-index: -2; /* so it can stack under the site-header::before background */
   }
 
   /* I made it width: 100%; so it will allow the entire row to be a link instead of just the text */
