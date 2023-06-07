@@ -105,6 +105,11 @@ html:focus-within {
   background-color: var(--clr-accent-red);
 }
 
+/* To hide overflow of nav */
+html {
+  overflow-x: hidden;
+}
+
 /* Set core body defaults */
 body {
   font-family: var(--ff-primary);
@@ -113,7 +118,9 @@ body {
   color: var(--clr-primary-400);
   background-color: var(--bg-body);
   line-height: 1.5;
-  overflow-x: hidden; /* I used this because I have my nav translated off the right of the page and I need to hide it  */
+  /* I used this because I have my nav translated off the right of the page and I need to hide it  */
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -219,10 +226,6 @@ footer {
 
 b {
   font-weight: var(--fw-700);
-}
-
-.color-secondary {
-  color: var(--clr-secondary-400);
 }
 
 .text-center {
@@ -351,8 +354,6 @@ b {
     gap: 1rem;
   }
 } */
-
-
 
 /* === Basical styles for my nav accross the entire site === */
 
