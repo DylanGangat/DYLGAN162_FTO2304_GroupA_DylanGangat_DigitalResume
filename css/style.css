@@ -106,9 +106,9 @@ html:focus-within {
 }
 
 /* To hide overflow of nav */
-html {
+/* html {
   overflow-x: hidden;
-}
+} */
 
 /* Set core body defaults */
 body {
