@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap');
 
 /* Custom properties */
 
 :root {
   /* Font family */
-  --ff-primary: "Montserrat", sans-serif;
-  --ff-secondary: "Press Start 2P", cursive;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Press Start 2P', cursive;
 
   /* Font weight*/
   --fw-400: 400;
@@ -324,7 +324,7 @@ b {
 /* Do to the header being the containing block, the child menu can't be under it */
 
 .site-header::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-color: var(--bg-body);
@@ -580,7 +580,7 @@ b {
 
 .card {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
   border: var(--border-dotted);
   background-color: var(--bg-body);
   padding: 0.75rem;
@@ -735,14 +735,14 @@ b {
 .site-footer {
   font-family: var(--ff-secondary);
   color: var(--clr-neutral);
-  background-image: url("/images/backgrounds/footer-background-2.gif");
+  background-image: url('/images/backgrounds/footer-background-2.gif');
   background-color: var(--clr-primary-400);
   background-position: top;
 }
 
 @media (min-width: 50em) {
   .site-footer {
-    background-image: url("/images/backgrounds/footer-background-1.gif");
+    background-image: url('/images/backgrounds/footer-background-1.gif');
   }
 }
 
